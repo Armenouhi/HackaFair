@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+#parent {
+    position: relative;
+}
+.child {
+    margin-left: 38%;
+    margin-top: 1100px;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+img {
+    margin-left: 5%;
+}
+.bttn:hover {
+    text-decoration: none;
+    background-color: forestgreen !important;
+}
+.err {
+    color: red;
+}
+.fl {
+    width: 50%;
+    height: 100%;
+    text-align: justify;
+    margin-right: 15px;
+}
+.userBtn{
+    margin-left: -8%;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-radius:5px ;
+}
+.fizBtn {
+    margin-left: -18%;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-radius:5px ;
+}
+
+ul#main-nav li {
+    float: left;
+    position: relative;
+    display: inline;
+}
+ul#main-nav li a {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    background-position: center center;
+    color: #44403b;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+ul#main-nav li {
+    border: 2px solid green;
+    padding: 10px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: auto;
+    height: 50px;
+    background-color: green;
+    margin-top: 1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+ul#main-nav li.current a {
+    background-position: top;
+    color: #ffffff;
+}
+ul#main-nav li a:hover {
+    background-position: bottom;
+    color: #ffffff;
+}
+ul#main-nav li.current a:hover {
+    background-position: top;
+    color: #ffffff;
+}
+
+h1
+{
+    margin-left: 20%;
+    margin-top: 100px;
+    text-decoration: none;
+}
+#text {
+    text-align: center;
+    margin-top: 10%;
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    width: 99%;
+    border-radius: 15px;
+    height: 500px;
+}
+h2{
+    color: beige;
+    margin-right: 30px;
+}
+.pre {
+    margin-top: 5%;
+}

@@ -1,0 +1,65 @@
+<section class="col-md-12" ng-controller = "InformaticsCtrl">
+    <div class="col-md-12 " style="width: 90%; margin-left: 5%;">
+        <h1>Ինֆորմատիկայի հարցեր</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="comment1">Առաջին մակարդակի հարց:</label>
+                <textarea class="form-control" rows="5" id="comment1" ng-model="obj.obj1.harc" ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comment11">Պատասխան:</label>
+                <textarea class="form-control" rows="2" id="comment11"  ng-model="obj.obj1.patasxan"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comment111">Տարբերակներ:</label>
+                <textarea class="form-control" rows="5" id="comment111"  ng-model="obj.obj1.tarberakner"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comment1111">Միավոր:</label>
+                <input id="comment1111"  ng-model="obj.obj1.point">
+            </div>
+
+            <div class="form-group">
+                <label for="comment2">Երկրորդ մակարդակի հարց:</label>
+                <textarea class="form-control" rows="5" id="comment2" ng-model="obj.obj2.harc" ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comment22">Պատասխան:</label>
+                <textarea class="form-control" rows="2" id="comment22"  ng-model="obj.obj2.patasxan"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comment222">Տարբերակներ:</label>
+                <textarea class="form-control" rows="5" id="comment222"  ng-model="obj.obj2.tarberakner"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comment2222">Միավոր:</label>
+                <input id="comment2222"  ng-model="obj.obj2.point">
+            </div>
+
+            <div class="form-group">
+                <label for="comment3">Երրորդ մակարդակի հարց:</label>
+                <textarea class="form-control" rows="5" id="comment3" ng-model="obj.obj3.harc" ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comment33">Պատասխան:</label>
+                <textarea class="form-control" rows="2" id="comment33"  ng-model="obj.obj3.patasxan"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comment333">Տարբերակներ:</label>
+                <textarea class="form-control" rows="5" id="comment333"  ng-model="obj.obj3.tarberakner"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comment3333">Միավոր:</label>
+                <input id="comment3333"  ng-model="obj.obj3.point">
+            </div>
+            <button type="submit" class="btn text-white button mt-5 mb-5"  ng-click='insert()' style="background-color: lightseagreen">Մուտք</button>
+        </form>
+    </div>
+</section>

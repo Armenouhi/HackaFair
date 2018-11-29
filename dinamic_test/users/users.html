@@ -1,0 +1,88 @@
+<section class="col-md-12" ng-controller = "UsersCtrl" style="background: lightgray">
+    <div >
+        <div style ="text-align: center">
+            <h2 class="text-dark ">Ֆիզիկա</h2>
+            <table class="table mt-5" border="3" style=" margin: 0px auto;" >
+                <tr style="background-color: darkslategray; color: white" class="">
+                    <td class="smallText1">Number</td>
+                    <td class="smallText1">Name</td>
+                    <td class="smallText1">Lastname</td>
+                    <td class="smallText1">E-mail</td>
+                    <td class="smallText1">Address</td>
+                    <td class="smallText1">School name</td>
+                    <td class="smallText1">Class</td>
+                    <td class="smallText1">Count</td>
+
+                </tr>
+                <tr ng-repeat="(key, x) in fizica  | orderBy : '-count'">
+                    <td class="smallText">{{ key+1}}</td>
+                    <td class="smallText">{{ x.name }}</td>
+                    <td class="smallText">{{ x.lastname }}</td>
+                    <td class="smallText">{{ x.email }}</td>
+                    <td class="smallText">{{ x.address }}</td>
+                    <td class="smallText">{{ x.schoolName }}</td>
+                    <td class="smallText">{{ x.class }}</td>
+                    <td class="smallText">{{ x.count }}</td>
+
+            </table>
+
+        </div>
+
+        <div class="mt-5" style ="text-align: center">
+        <h2 class="text-dark" style ="margin: 0px auto">Ինֆորմատիկա </h2>
+
+            <table class="table mt-5" border="3" style=" margin: 0px auto;" >
+                <tr style="background-color: darkslategray; color: white">
+                    <td class="smallText1">Number</td>
+                    <td class="smallText1">Name</td>
+                    <td class="smallText1">Lastname</td>
+                    <td class="smallText1">E-mail</td>
+                    <td class="smallText1">Address</td>
+                    <td class="smallText1">School name</td>
+                    <td class="smallText1">Class</td>
+                    <td class="smallText1">Count</td>
+
+                </tr>
+                <tr ng-repeat="(key, x) in informatica | orderBy : '-count'">
+                    <td class="smallText">{{ key+1}}</td>
+                    <td class="smallText">{{ x.name }}</td>
+                    <td class="smallText">{{ x.lastname }}</td>
+                    <td class="smallText">{{ x.email }}</td>
+                    <td class="smallText">{{ x.address }}</td>
+                    <td class="smallText">{{ x.schoolName }}</td>
+                    <td class="smallText">{{ x.class }}</td>
+                    <td class="smallText">{{ x.count }}</td>
+
+            </table>
+        </div>
+        <div class="mt-5" style ="text-align: center">
+        <h2 class="text-dark" style ="margin: 0px auto">Մաթեմատիկա</h2>
+
+            <table class="table mt-5" border="3" style=" margin: 0px auto;" >
+                <tr style="background-color: darkslategray; color: white">
+                    <td class="smallText1">Number</td>
+                    <td class="smallText1">Name</td>
+                    <td class="smallText1">Lastname</td>
+                    <td class="smallText1">E-mail</td>
+                    <td class="smallText1">Address</td>
+                    <td class="smallText1">School name</td>
+                    <td class="smallText1">Class</td>
+                    <td class="smallText1">Count</td>
+
+                </tr>
+                <tr ng-repeat="(key, x) in matematica  | orderBy : '-count'">
+                    <td class="smallText">{{ key+1}}</td>
+                    <td class="smallText">{{ x.name }}</td>
+                    <td class="smallText">{{ x.lastname }}</td>
+                    <td class="smallText">{{ x.email }}</td>
+                    <td class="smallText">{{ x.address }}</td>
+                    <td class="smallText">{{ x.schoolName }}</td>
+                    <td class="smallText">{{ x.class }}</td>
+                    <td class="smallText">{{ x.count }}</td>
+
+            </table>
+        </div>
+
+
+    </div>
+</section>

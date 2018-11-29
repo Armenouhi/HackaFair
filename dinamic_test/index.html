@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dinamic Test</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-app="myApp">
+
+            <header id="parent" class="container-fluid " style="background-image: url('images/4.png'); height: 100vh; background-repeat: no-repeat; background-size: cover; ">
+
+                <div class="col-sm-12" >
+                    <ul id="main-nav">
+                        <li class="portfolio  ml-2"><a class="nav-link text-white mb-3" href="#!/informatics" ng-click="registration = !registration">Ինֆորմատիկայի հարցեր</a></li>
+                        <li class="services ml-4"><a class="nav-link text-white " href="">Մաթեմատիկայի հարցեր</a></li>
+                        <li class="contact ml-4"><a class="nav-link text-white " href="#!/users " ng-click="registration = !registration">Արդյունքներ</a></li>
+                    </ul>
+                </div>
+
+                <div id="text">
+                <pre class="pre">
+                    <h2 class=""><strong style="color: #000;">THREE / NUTS</strong></h2>
+                    <h1 class="text-dark" style="margin-left: -30px">DINAMIC TEST SYSTEM</h1>
+                    <h4 class="h4 text-dark">Are You ready?</h4>
+                </pre>
+                </div>
+
+                    <div class="col-sm-12">
+                        <div id="" class="child bg-success" ng-show="!registration">
+                            <a href="#!/examination" class="bttn bg-success text-white" ng-click="registration = !registration" style="font-size: 30px">
+                               Գրանցվել
+                            </a>
+                        </div>
+                    </div>
+            </header>
+
+            <div ng-view></div>
+            <footer class="container-fluid" style="background: lightgray; margin: 0 auto">
+
+                <div class="row">
+
+                    <div class="col-md-12 mb-5 fl d-flex justify-content-center">
+                        <img src="images/5.png" alt="Image not found" style="width: auto; height: 100px" data-original="IMAGE URL"  align="left">
+                        <p class="text-white" style="font-size: 22px; margin-top: 2%">
+                            Ա Բ Գ Դ Ե Զ Է Ը Թ Ժ Ի Լ Խ Ծ Կ Հ Ձ Ղ Ճ Մ Յ Ն Շ Ո Չ Պ Ջ Ռ Ս Վ Տ Ր Ց Ւ Փ ԵՎ Օ Ֆ
+                        </p>
+                    </div>
+
+                </div>
+            </footer>
+            <script src="app/app.js"></script>
+            <script src="app/controllers.js"></script>
+    </body>
+</html>

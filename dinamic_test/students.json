@@ -1,0 +1,77 @@
+{ 
+    "_id" : ObjectId("5bb81500aa586f0fa00674cb"), 
+    "name" : "Արմենուհի", 
+    "lastname" : "Թորոյան", 
+    "email" : "armenuhitoroyan1993@gmail.com", 
+    "address" : "Շիրակի մարզ գ. Արևիկ", 
+    "schoolName" : "<<Արևիկի միջնակարգ դպրոց>> ՊՈԱԿ", 
+    "class" : "6", 
+    "subject" : "matematica", 
+    "count" : NumberInt(14)
+}
+{ 
+    "_id" : ObjectId("5bb81613aa586f0fa00674cc"), 
+    "name" : "Սերինե", 
+    "lastname" : "Բաղդասարյան", 
+    "email" : "serinebagdasaryan5@gmail.com", 
+    "address" : "Շիրակի մարզ գ. Ախուրիկ", 
+    "schoolName" : "<<Ախուրիկի միջնակարգ դպրոց>> ՊՈԱԿ", 
+    "class" : "10", 
+    "subject" : "informatica", 
+    "count" : NumberInt(19)
+}
+{ 
+    "_id" : ObjectId("5bb85e936eafcc15a8858453"), 
+    "name" : "Տիգրան", 
+    "lastname" : "ՀՅգֆհյ", 
+    "email" : "nazely666@mail.ru", 
+    "address" : "կլդֆյգհօպդֆի", 
+    "schoolName" : "գֆհյգֆյֆյ", 
+    "class" : "12", 
+    "subject" : "matematica", 
+    "count" : NumberInt(9)
+}
+{ 
+    "_id" : ObjectId("5bb86b8fbb7af7265c324485"), 
+    "name" : "Նազիկ", 
+    "lastname" : "Ինջյան", 
+    "email" : "armenuhitoroyan@mail.ru", 
+    "address" : "Շիրակի մարզ գ. Այգաբաց", 
+    "schoolName" : "<<Ախուրիկի միջնակարգ դպրոց>> ՊՈԱԿ", 
+    "class" : "12", 
+    "subject" : "matematica", 
+    "count" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("5bb876655164a61aec8f4958"), 
+    "name" : "Նազիկ", 
+    "lastname" : "Ինջյան", 
+    "email" : "armenuhitoroyan@mail.ru", 
+    "address" : "Շիրակի մարզ գ. Արևիկ", 
+    "schoolName" : "<<Ախուրիկի միջնակարգ դպրոց>> ՊՈԱԿ", 
+    "class" : "12", 
+    "subject" : "matematica", 
+    "count" : NumberInt(24)
+}
+{ 
+    "_id" : ObjectId("5bb87b8f5164a61aec8f4959"), 
+    "name" : "Նազիկ", 
+    "lastname" : "Ինջյան", 
+    "address" : "Շիրակի մարզ գ. Այգաբաց", 
+    "schoolName" : "<<Այգաբացի միջնակարգ դպրոց>> ՊՈԱԿ", 
+    "class" : "12", 
+    "subject" : "informatica", 
+    "email" : "armenuhitoroyan@mail.ru", 
+    "count" : NumberInt(10)
+}
+{ 
+    "_id" : ObjectId("5bb880b85164a61aec8f495a"), 
+    "name" : "Նազիկ", 
+    "lastname" : "Ինջյան", 
+    "email" : "armenuhitoroyan@mail.ru", 
+    "address" : "Շիրակի մարզ գ. Արևիկ", 
+    "schoolName" : "<<Այգաբացի միջնակարգ դպրոց>> ՊՈԱԿ", 
+    "class" : "12", 
+    "subject" : "informatica", 
+    "count" : NumberInt(4)
+}

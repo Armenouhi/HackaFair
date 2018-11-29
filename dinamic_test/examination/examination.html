@@ -1,0 +1,81 @@
+<section class="col-md-12" ng-controller = "ExaminationCtrl" style="background: lightgray">
+    <div class="col-md-12 " style="width: 90%; margin-left: 5%;">
+        <form class="" ng-show="action==='show'">
+            <label for="name">
+                <span class="label-text">Անուն </span>
+            </label>
+            <input class="form-control" id="name" type="text" placeholder="Անուն" ng-model="student.name" />
+                <span class="err">{{errors.name_error}}</span> <br/>
+            <label for="lastname">
+                <span class="label-text">Ազգանուն </span>
+            </label>
+            <input class="form-control" id="lastname" type="text" placeholder="Ազգանուն" ng-model="student.lastname" />
+            <span class="err">{{errors.lastname_error}}</span> <br/>
+
+            <label for="email">
+                <span class="label-text">Էլ. փոստ </span>
+            </label>
+            <input class="form-control" id="email" type="text" placeholder="օր.՝ email@address.com" ng-model="student.email" />
+            <span class="err">{{errors.email_error}}</span> <br/>
+
+            <label for="address">
+                <span class="label-text">Հասցե </span>
+            </label>
+            <input class="form-control" id="address" type="text" placeholder="Հասցե" ng-model="student.address" />
+            <span class="err">{{errors.address_error}}</span> <br/>
+
+            <label for="schoolName">
+                <span class="label-text">Դպրոցի  անունը </span>
+            </label>
+            <input class="form-control" id="schoolName" type="text" placeholder="Դպրոցի  անունը" ng-model="student.schoolName" />
+            <span class="err">{{errors.schoolName_error}}</span> <br/>
+
+            <label for="class">
+                <span class="label-text">Դասարան </span>
+            </label>
+            <input class="form-control" id="class" type="text" placeholder="Դասարան" ng-model="student.class" />
+            <span class="err">{{errors.class_error}}</span> <br/>
+
+
+            <label for="sel1">Ընտրեք առարկան</label>
+            <select class="form-control" id="sel1" ng-model="student.subject" name="sellist1">
+                <option>Ֆիզիկա</option>
+                <option>Մաթեմատիկա</option>
+                <option>Ինֆորմատիկա</option>
+            </select>
+            <span class="err">{{errors.subject_error}}</span> <br/>
+
+            <button type="submit" class="btn text-white button mt-5 mb-5"  ng-click='create("hide");'style="background-color: lightseagreen">Մուտք</button>
+
+        </form>
+
+        <div class="col-md-12" ng-show="action==='hide'">
+            <section class="container-fluid addTest" style="margin-top: 0px">
+
+                <h1 class="" style="color: black">{{harc}}</h1>
+                <form name="myForm">
+                    <label class="form-control">{{tarberakner[0]}}
+                        <input type="radio" ng-model="selectedAnswer" value="{{tarberakner[0]}}">
+                    </label><br/>
+                    <label class="form-control">{{tarberakner[1]}}
+                        <input type="radio" ng-model="selectedAnswer" value="{{tarberakner[1]}}">
+                    </label><br/>
+                    <label class="form-control">{{tarberakner[2]}}
+                        <input type="radio" ng-model="selectedAnswer" value="{{tarberakner[2]}}">
+                    </label><br/>
+                    <label class="form-control">{{tarberakner[3]}}
+                        <input type="radio" ng-model="selectedAnswer" value="{{tarberakner[3]}}">
+                    </label><br/>
+
+                    <button type="submit" class="btn mb-5 text-white mt-5 form-control bg-success" ng-click="sendAnswer()">Send answer</button>
+                    <button type="submit" class="btn mb-5 text-white mt-5 form-control bg-success" ng-click="sendData()" >End test</button>
+                    <h5>{{result}}</h5>
+
+                </form>
+            </section>
+        </div>
+
+
+
+    </div>
+</section>

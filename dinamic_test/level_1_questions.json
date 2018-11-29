@@ -1,0 +1,143 @@
+{ 
+    "_id" : ObjectId("5baf5997b81e72f57bd532c1"), 
+    "num" : 1.0, 
+    "harc" : "harcMatematika_1.1", 
+    "patasxan" : "patasxan_1.1", 
+    "tarberakner" : [
+        "1", 
+        "2", 
+        "patasxan_1.1", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5baf59edb81e72f57bd532dc"), 
+    "num" : 2.0, 
+    "harc" : "harc_1.2", 
+    "patasxan" : "patasxan_1.2", 
+    "tarberakner" : [
+        "patasxan_1.2", 
+        "2", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5baf5a50b81e72f57bd53300"), 
+    "num" : 3.0, 
+    "harc" : "harc_1.3", 
+    "patasxan" : "patasxan_1.3", 
+    "tarberakner" : [
+        "1", 
+        "patasxan_1.3", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb32fb217fd1715e43af0cb"), 
+    "num" : 4.0, 
+    "harc" : "harc_1.4", 
+    "patasxan" : "patasxan_1.4", 
+    "tarberakner" : [
+        "1", 
+        "2", 
+        "patasxan_1.4", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb32fd217fd1715e43af0cc"), 
+    "num" : 5.0, 
+    "harc" : "harc_1.5", 
+    "patasxan" : "patasxan_1.5", 
+    "tarberakner" : [
+        "1", 
+        "2", 
+        "3", 
+        "patasxan_1.5"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb3300e17fd1715e43af0cd"), 
+    "num" : 6.0, 
+    "harc" : "harc_1.6", 
+    "patasxan" : "patasxan_1.6", 
+    "tarberakner" : [
+        "1", 
+        "patasxan_1.6", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb3303117fd1715e43af0ce"), 
+    "num" : 7.0, 
+    "harc" : "harc_1.7", 
+    "patasxan" : "patasxan_1.7", 
+    "tarberakner" : [
+        "patasxan_1.7", 
+        "2", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb3304b17fd1715e43af0cf"), 
+    "num" : 8.0, 
+    "harc" : "harc_1.8", 
+    "patasxan" : "patasxan_1.8", 
+    "tarberakner" : [
+        "1", 
+        "patasxan_1.8", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb3306c17fd1715e43af0d0"), 
+    "num" : 9.0, 
+    "harc" : "harc_1.9", 
+    "patasxan" : "patasxan_1.9", 
+    "tarberakner" : [
+        "patasxan_1.9", 
+        "2", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb330aa17fd1715e43af0d1"), 
+    "num" : 10.0, 
+    "harc" : "harc_1.10", 
+    "patasxan" : "patasxan_1.10", 
+    "tarberakner" : [
+        "1", 
+        "2", 
+        "3", 
+        "patasxan_1.10"
+    ], 
+    "point" : 1.0
+}
+{ 
+    "_id" : ObjectId("5bb4aeaa17fd171f9488e0d1"), 
+    "num" : 11.0, 
+    "harc" : "harc_1.11", 
+    "patasxan" : "patasxan_1.11", 
+    "tarberakner" : [
+        "1", 
+        "patasxan_1.11", 
+        "3", 
+        "4"
+    ], 
+    "point" : 1.0
+}
