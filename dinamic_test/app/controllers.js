@@ -9,7 +9,7 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
 
         $scope.student;
 
-        if ($scope.student.subject == "Ֆիզիկա")  {
+        if ($scope.student.subject == "Ֆիզիկա")  {    // select-ի մեջ եղած հայերեն անվանումները համեմատում ենք, բազաների անունների հետ
             $scope.student.subject = "fizika";
         }
         if ($scope.student.subject == "Մաթեմատիկա")  {
@@ -19,20 +19,17 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
             $scope.student.subject = "informatica";
         }
 
-        console.log($scope.student);
 
         var url = "http://localhost:8081/student";
-        $http.post(url, $scope.student)
+        $http.post(url, $scope.student)  // ուղարկում ուսանողի ընտրած ենք առարկան
             .then(function(res) {
 
                  $scope.errors = res.data;
-                 // console.log(res.data);
-                 // console.log(typeof res.data);
-
+                
                  if (typeof(res.data) == "string") {
                      $scope.action=action;
 
-                      // console.log(res.data);
+                      
                      /**
                       *   Databases
                       * */
@@ -42,11 +39,10 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
 
                      $scope.count = 0;
 
-                     $http.get("http://localhost:8081/test_" + x)
+                     $http.get("http://localhost:8081/test_" + x)   // թեստերի մակարդակների ստուգում
                          .then(function(res) {
                              $scope.test = res.data;
                              level = $scope.test[Math.floor(Math.random() * $scope.test.length)];
-                             // console.log('level',level);
 
                              $scope.harc =  level.harc;
                              $scope.tarberakner =  level.tarberakner;
@@ -56,12 +52,11 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
                      $scope.sendAnswer =  function() {
                          if ($scope.selectedAnswer == $scope.patasxan) {
                              $scope.count+=level.point;
-                             // console.log('point',level.point);
-                             // console.log('count',$scope.count);
+                             
 
                              if (x != 3) {
-                                 x+=1;
-                                 $http.get('http://localhost:8081/test_' + x)
+                                 x+=1; // թեստի մակարդակը բարձրանում է
+                                 $http.get('http://localhost:8081/test_' + x)  
                                      .then(function(res) {
                                          $scope.test = res.data;
                                          level = $scope.test[Math.floor(Math.random() * $scope.test.length)];
@@ -73,7 +68,8 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
                              }
 
                              else {
-                                 $http.get('http://localhost:8081/test_' + 3)
+                                 $http.get('http://localhost:8081/test_' + 3)  // եթե վերջին 3-րդ մակարդակում է, այլևս չբարձրանա մակարդակը,,
+                                                                                // ճիշտ պատասխաններն ավարտելու դեպքում, ավարվի նաև թեստը
                                      .then(function(res) {
 
                                          $scope.test = res.data;
@@ -89,14 +85,13 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
 
                          } else {
                              if(x!=1){
-                                 x-=1;
+                                 x-=1; // թեստի մակարդակը նվազում է
                                  $http.get('http://localhost:8081/test_' + x)
                                      .then(function(res) {
 
                                          $scope.test = res.data;
                                          level = $scope.test[Math.floor(Math.random() * $scope.test.length)];
-                                         // console.log('level',level);
-
+                                         
                                          $scope.harc =  level.harc;
                                          $scope.tarberakner =  level.tarberakner;
                                          $scope.patasxan =  level.patasxan;
@@ -104,12 +99,12 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
                                      });
                              }
                              else {
-                                 $http.get('http://localhost:8081/test_' + 1)
+                                 $http.get('http://localhost:8081/test_' + 1) // եթե 1-ին մակարդակում է, սխալ պատասխանի դեպքում չնվազի մակարդակը,,
+                                                                                
                                      .then(function(res) {
 
                                          $scope.test = res.data;
                                          level = $scope.test[Math.floor(Math.random() * $scope.test.length)];
-                                         // console.log('level',level);
 
                                          $scope.harc =  level.harc;
                                          $scope.tarberakner =  level.tarberakner;
@@ -122,10 +117,10 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
 
                      $scope.sendData=function () {
                          $scope.student.count=$scope.count;
-                         console.log( "$scope.student.count",$scope.student.count);
+                         
                          var uploadUrl = "http://127.0.0.1:8081/account";
                          $http.post(uploadUrl, $scope.student) .then(function(res) {
-                             console.log( "xrgeci",res.data);
+                             
                              $scope.result =  res.data.resultat;
                          });
                      }
@@ -135,7 +130,7 @@ app.controller('ExaminationCtrl',  ['$scope','$http',function($scope, $http) {
                  } else {
 
                      $scope.formStudents = false;
-                     // $scope.popoxakan = false;
+                     
                  }
             });
 
@@ -174,25 +169,21 @@ app.controller('UsersCtrl',  ['$scope','$http',function($scope, $http) {
 app.controller('InformaticsCtrl',  ['$scope','$http',function($scope, $http) {
 $scope.insert=function () {
 
-    console.log($scope.obj);
-    var t1=$scope.obj.obj1.tarberakner;
+    var t1=$scope.obj.obj1.tarberakner; // 1-ին մակարդակի հարցերի տարբերակներ
     var tarberakner1 =t1.split("+");
     $scope.obj.obj1.tarberakner = tarberakner1;
 
-    var t2=$scope.obj.obj2.tarberakner;
+    var t2=$scope.obj.obj2.tarberakner; // 2-րդ մակարդակի հարցերի տարբերակներ
     var tarberakner2 =t2.split("+");
     $scope.obj.obj2.tarberakner = tarberakner2;
 
-    var t3=$scope.obj.obj3.tarberakner;
+    var t3=$scope.obj.obj3.tarberakner;   // 3-րդ մակարդակի հարցերի տարբերակներ
     var tarberakner3 =t3.split("+");
     $scope.obj.obj3.tarberakner = tarberakner3;
 
-    console.log($scope.obj.obj1.tarberakner);
-    console.log($scope.obj.obj2.tarberakner);
-    console.log($scope.obj.obj3.tarberakner);
 
  $http.post('http://localhost:8081/info_questions', $scope.obj) .then(function(res) {
-
+        var result = res.data;
  });
 
 

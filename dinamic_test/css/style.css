@@ -7,10 +7,10 @@ body {
     position: relative;
 }
 .child {
-    margin-left: 38%;
-    margin-top: 1100px;
-    width: 300px;
-    height: 100px;
+    margin-left: 40%;
+    margin-top: 710px;
+    width: 155px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

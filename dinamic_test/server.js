@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 
 var MongoClient = require('mongodb').MongoClient;
-const collOne = 'level_1_questions';
+const collOne = 'level_1_questions';   // թեստերի մակարդակները
 const collTwo = 'level_2_questions';
 const collThree = 'level_3_questions';
 
@@ -24,9 +24,9 @@ app.get('/', function(req, res) {
 
     app.post('/student', function (req, res) {
 
-
-
-    // console.log(req.body);
+        /**
+        * Validation
+        */
 
         var Errors = {};
     success = true;
@@ -90,14 +90,11 @@ app.get('/', function(req, res) {
 
     if (success == false)  {
         res.send(Errors);
-    } else  {
+    } else  {  // եթե  գրանցվելու ժամանակ  ոչ մի թերություն չի հայտնաբերվել
 
-        var dbHeq = req.body.subject;
+        var dbHeq = req.body.subject;  // փոփոխականին փոխանցված է ընտրված առարկայի անունը
         var DBUrl = "mongodb://localhost:27017/" +dbHeq;
-        // console.log(DBUrl);
-        // console.log(dbHeq);
-
-
+        
         app.get('/test_1', function (req, res) {
 
             MongoClient.connect(DBUrl,  { useNewUrlParser: true },function (err, client) {
@@ -106,7 +103,8 @@ app.get('/', function(req, res) {
                 var db = client.db(dbHeq)
                 db.collection(collOne).find().toArray(function (err, userData) {
                     if (err) throw err
-                    res.send(userData);
+                    res.send(userData);  // եթե ամեն ինչ լավ է,
+                                        // հաջողությամբ գտնում է ընտրված առարկայի բազայի պարունակությունը 
                 })
             });
         })
@@ -119,7 +117,8 @@ app.get('/', function(req, res) {
                 var db = client.db(dbHeq)
                 db.collection(collTwo).find().toArray(function (err, userData) {
                     if (err) throw err
-                    res.send(userData);
+                    res.send(userData); // եթե ամեն ինչ լավ է,
+                                        // հաջողությամբ գտնում է ընտրված առարկայի բազայի պարունակությունը 
                 })
             });
         })
@@ -133,7 +132,9 @@ app.get('/', function(req, res) {
                 var db = client.db(dbHeq)
                 db.collection(collThree).find().toArray(function (err, userData) {
                     if (err) throw err
-                    res.send(userData);
+                    res.send(userData); // եթե ամեն ինչ լավ է,
+                                        // հաջողությամբ գտնում է ընտրված առարկայի բազայի պարունակությունը 
+
                 })
             });
         })
@@ -141,25 +142,22 @@ app.get('/', function(req, res) {
 
         app.post('/account', function (req, res) {
 
-
-
-
             MongoClient.connect(DBUrl, { useNewUrlParser: true }, function (err, client) {
-                console.log(DBUrl);
+                
                 if (err) throw err
 
                 var db = client.db(dbHeq)
                 var myobj = req.body;
                 db.collection("students").insertOne(myobj, function(err, res) {
                     if (err) throw err
-                    // console.log("1 document inserted");
-                    client.close();
+                     
+
+                     // Յուրաքանչյուր ընտրված առարկայի բազայում ավելանում  են բոլոր գրանցված աշակերտները
+                    client.close();   
                 })
             });
-            // console.log(req.body.name);
-            // console.log(req.body.lastname);
-            // console.log(req.body.email);
-             console.log(req.body.count);
+            
+             
 
 
             var nodemailer = require('nodemailer');
@@ -167,7 +165,7 @@ app.get('/', function(req, res) {
             var transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: 'fornodejstest@gmail.com',
+                    user: 'fornodejstest@gmail.com',  
                     pass: 'mxonazul111'
                 }
             });
@@ -181,10 +179,10 @@ app.get('/', function(req, res) {
 
             transporter.sendMail(mailOptions, function (err, info) {
                 if(err)  {
-                    // console.log(err)
+                   
                 }
                 else {
-                    // console.log(info);
+                    
                 }
 
             });
@@ -210,7 +208,7 @@ app.get('/subjectFizica', function (req, res) {
 
         var db = client.db("fizika")
         db.collection('students').find().toArray(function (err, userData) {
-            if (err) throw err
+            if (err) throw err  // Ֆիզիկա առարկայից քննություն հանձնած բոլոր աշակերտների ցանկկը
             res.send(userData);
         })
     });
@@ -223,8 +221,8 @@ app.get('/subjectInformatica', function (req, res) {
         var db = client.db("informatica")
         db.collection('students').find().toArray(function (err, userData) {
             if (err) throw err
-            res.send(userData);
-        })
+            res.send(userData);   // Ինֆորմատիկա առարկայից քննություն հանձնած բոլոր աշակերտների ցանկկը
+        }) 
     });
 })
 app.get('/subjaectMatematica', function (req, res) {
@@ -235,51 +233,54 @@ app.get('/subjaectMatematica', function (req, res) {
         var db = client.db("matematica")
         db.collection('students').find().toArray(function (err, userData) {
             if (err) throw err
-            res.send(userData);
+            res.send(userData);  // Մաթեմատիկա առարկայից քննություն հանձնած բոլոր աշակերտների ցանկկը
         })
     });
 })
 
 
 
+/**
+* Մուտքագրել հարցերը
+*/
+
 app.post('/info_questions', function (req, res) {
-    console.log(req.body);
 
     MongoClient.connect("mongodb://localhost:27017/informatica", {useNewUrlParser: true}, function (err, client) {
-        console.log("mongodb://localhost:27017/informatica");
+    
         if (err) throw err
 
         var db = client.db("informatica")
-        var myobj = req.body.obj1;
+        var myobj = req.body.obj1;  
         db.collection(collOne).insertOne(myobj, function (err, res) {
             if (err) throw err
-            console.log("1 document inserted col1");
+             
             client.close();
         })
     });
 
     MongoClient.connect("mongodb://localhost:27017/informatica", {useNewUrlParser: true}, function (err, client) {
-        console.log("mongodb://localhost:27017/informatica");
+        
         if (err) throw err
 
         var db = client.db("informatica")
         var myobj = req.body.obj2;
         db.collection(collTwo).insertOne(myobj, function (err, res) {
             if (err) throw err
-            console.log("1 document inserted col2");
+            
             client.close();
         })
     });
 
     MongoClient.connect("mongodb://localhost:27017/informatica", {useNewUrlParser: true}, function (err, client) {
-        console.log("mongodb://localhost:27017/informatica");
+        
         if (err) throw err
 
         var db = client.db("informatica")
         var myobj = req.body.obj3;
         db.collection(collThree).insertOne(myobj, function (err, res) {
             if (err) throw err
-            console.log("1 document inserted col3");
+            
             client.close();
         })
     });

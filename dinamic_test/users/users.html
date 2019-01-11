@@ -4,26 +4,26 @@
             <h2 class="text-dark ">Ֆիզիկա</h2>
             <table class="table mt-5" border="3" style=" margin: 0px auto;" >
                 <tr style="background-color: darkslategray; color: white" class="">
-                    <td class="smallText1">Number</td>
-                    <td class="smallText1">Name</td>
-                    <td class="smallText1">Lastname</td>
-                    <td class="smallText1">E-mail</td>
-                    <td class="smallText1">Address</td>
-                    <td class="smallText1">School name</td>
-                    <td class="smallText1">Class</td>
-                    <td class="smallText1">Count</td>
+                    <td class="smallText1">Համարը</td>
+                    <td class="smallText1">Անուն</td>
+                    <td class="smallText1">Ազգանուն</td>
+                    <td class="smallText1">Էլ․ փոստ</td>
+                    <td class="smallText1">Հասցե</td>
+                    <td class="smallText1">Դպրոց</td>
+                    <td class="smallText1">Դասարան</td>
+                    <td class="smallText1">Արդյունք</td>
 
                 </tr>
-                <tr ng-repeat="(key, x) in fizica  | orderBy : '-count'">
-                    <td class="smallText">{{ key+1}}</td>
-                    <td class="smallText">{{ x.name }}</td>
-                    <td class="smallText">{{ x.lastname }}</td>
-                    <td class="smallText">{{ x.email }}</td>
-                    <td class="smallText">{{ x.address }}</td>
-                    <td class="smallText">{{ x.schoolName }}</td>
-                    <td class="smallText">{{ x.class }}</td>
-                    <td class="smallText">{{ x.count }}</td>
-
+                <tr ng-repeat="(index, user) in fizika | orderBy : '-count'">
+                    <td class="smallText">{{ index+1}}</td>
+                    <td class="smallText">{{ user.name }}</td>
+                    <td class="smallText">{{ user.lastname }}</td>
+                    <td class="smallText">{{ user.email }}</td>
+                    <td class="smallText">{{ user.address }}</td>
+                    <td class="smallText">{{ user.schoolName }}</td>
+                    <td class="smallText">{{ user.class }}</td>
+                    <td class="smallText">{{ user.count }}</td>
+                </tr>
             </table>
 
         </div>
@@ -33,26 +33,26 @@
 
             <table class="table mt-5" border="3" style=" margin: 0px auto;" >
                 <tr style="background-color: darkslategray; color: white">
-                    <td class="smallText1">Number</td>
-                    <td class="smallText1">Name</td>
-                    <td class="smallText1">Lastname</td>
-                    <td class="smallText1">E-mail</td>
-                    <td class="smallText1">Address</td>
-                    <td class="smallText1">School name</td>
-                    <td class="smallText1">Class</td>
-                    <td class="smallText1">Count</td>
+                   <td class="smallText1">Համարը</td>
+                    <td class="smallText1">Անուն</td>
+                    <td class="smallText1">Ազգանուն</td>
+                    <td class="smallText1">Էլ․ փոստ</td>
+                    <td class="smallText1">Հասցե</td>
+                    <td class="smallText1">Դպրոց</td>
+                    <td class="smallText1">Դասարան</td>
+                    <td class="smallText1">Արդյունք</td>
 
                 </tr>
-                <tr ng-repeat="(key, x) in informatica | orderBy : '-count'">
-                    <td class="smallText">{{ key+1}}</td>
-                    <td class="smallText">{{ x.name }}</td>
-                    <td class="smallText">{{ x.lastname }}</td>
-                    <td class="smallText">{{ x.email }}</td>
-                    <td class="smallText">{{ x.address }}</td>
-                    <td class="smallText">{{ x.schoolName }}</td>
-                    <td class="smallText">{{ x.class }}</td>
-                    <td class="smallText">{{ x.count }}</td>
-
+                <tr ng-repeat="(index, user) in informatica | orderBy : '-count'">
+                    <td class="smallText">{{ index+1}}</td>
+                    <td class="smallText">{{ user.name }}</td>
+                    <td class="smallText">{{ user.lastname }}</td>
+                    <td class="smallText">{{ user.email }}</td>
+                    <td class="smallText">{{ user.address }}</td>
+                    <td class="smallText">{{ user.schoolName }}</td>
+                    <td class="smallText">{{ user.class }}</td>
+                    <td class="smallText">{{ user.count }}</td>
+                </tr>
             </table>
         </div>
         <div class="mt-5" style ="text-align: center">
@@ -60,26 +60,26 @@
 
             <table class="table mt-5" border="3" style=" margin: 0px auto;" >
                 <tr style="background-color: darkslategray; color: white">
-                    <td class="smallText1">Number</td>
-                    <td class="smallText1">Name</td>
-                    <td class="smallText1">Lastname</td>
-                    <td class="smallText1">E-mail</td>
-                    <td class="smallText1">Address</td>
-                    <td class="smallText1">School name</td>
-                    <td class="smallText1">Class</td>
-                    <td class="smallText1">Count</td>
+                    <td class="smallText1">Համարը</td>
+                    <td class="smallText1">Անուն</td>
+                    <td class="smallText1">Ազգանուն</td>
+                    <td class="smallText1">Էլ․ փոստ</td>
+                    <td class="smallText1">Հասցե</td>
+                    <td class="smallText1">Դպրոց</td>
+                    <td class="smallText1">Դասարան</td>
+                    <td class="smallText1">Արդյունք</td>
 
                 </tr>
-                <tr ng-repeat="(key, x) in matematica  | orderBy : '-count'">
-                    <td class="smallText">{{ key+1}}</td>
-                    <td class="smallText">{{ x.name }}</td>
-                    <td class="smallText">{{ x.lastname }}</td>
-                    <td class="smallText">{{ x.email }}</td>
-                    <td class="smallText">{{ x.address }}</td>
-                    <td class="smallText">{{ x.schoolName }}</td>
-                    <td class="smallText">{{ x.class }}</td>
-                    <td class="smallText">{{ x.count }}</td>
-
+                <tr ng-repeat="(index, user) in matematica | orderBy : '-count'">
+                    <td class="smallText">{{ index+1}}</td>
+                    <td class="smallText">{{ user.name }}</td>
+                    <td class="smallText">{{ user.lastname }}</td>
+                    <td class="smallText">{{ user.email }}</td>
+                    <td class="smallText">{{ user.address }}</td>
+                    <td class="smallText">{{ user.schoolName }}</td>
+                    <td class="smallText">{{ user.class }}</td>
+                    <td class="smallText">{{ user.count }}</td>
+                </tr>
             </table>
         </div>
 
